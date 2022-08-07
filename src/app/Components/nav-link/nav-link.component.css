@@ -1,5 +1,7 @@
 button{
     @apply
+    relative
+
     bg-slate-200
     text-slate-900
     font-bold
@@ -13,4 +15,20 @@ button{
     mx-1
     sm:h-fit
     sm:py-2
+}
+button[title]:hover::before{
+    content: attr(title);
+    @apply
+    
+    absolute
+    left-0
+    text-xs
+    text-emerald-800
+    bg-slate-100
+    shadow-lg
+    p-2
+    rounded-lg
+    sm:shadow-2xl
+    -bottom-full
+    sm:top-full
 }

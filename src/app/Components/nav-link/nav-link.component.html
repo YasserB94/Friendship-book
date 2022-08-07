@@ -1,1 +1,3 @@
-<button type="button">{{ navLink.buttonName | uppercase }}</button>
+<button type="button" [title]="navLink.description">
+  {{ navLink.buttonName | uppercase }}
+</button>

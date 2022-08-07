@@ -1,0 +1,16 @@
+button{
+    @apply
+    bg-slate-200
+    text-slate-900
+    font-bold
+    rounded-md
+    hover:text-slate-200
+    hover:bg-emerald-700
+    /*RESPONSIVENESS*/
+    h-full
+    py-2
+    px-4
+    mx-1
+    sm:h-fit
+    sm:py-2
+}

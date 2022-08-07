@@ -1,0 +1,10 @@
+nav{
+    @apply 
+    flex
+    justify-between
+    p-3
+    
+    bg-slate-800
+    text-slate-300
+    font-mono
+}

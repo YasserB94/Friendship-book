@@ -1,27 +1,83 @@
-# FriendApp
+# Friendship book
+A simple webapp where people can add themselves as friends to the app, view all friends. As a BeCode exercise to learn Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+## How can I run this app ? 
+- Currently the App is not Live on any server.
+- Make sure you have prerequisites
+    - Node v 16 LTS
+    - Node Package Manager
+    - Angular CLI
+- To run it:
+    - Clone this repository
+    - run ```npm install``` to get the dependencies
+    - run ```ng serve --open``` To open the webapp in your browser
 
-## Development server
+***
+### Project Structure Guidelines
+- Friend-app
+    - src
+        - app
+            - Shared ```Hosts all shared entities```
+                - Components    ```Dumb Components```
+                - Containers    ```Smart Components```
+                - Directives    ```Shared Directives that add behaviour``` 
+                - Guards        ```Logic that prevents behaviour```
+                - Pipes         ```Transformers for data rendered```
+                - Services      ```Shared Singletons that provide data```
+                - Core          ```Shared TypeScript Entities: Classes,enums,interfaces```
+            - Feature (example: friend-foe-form)
+                - Components    ```Dumb Components```
+                - Containers    ```Smart Components```
+                - Directives    ```Directives that add behaviour``` 
+                - Guards        ```Logic that prevents behaviour```
+                - Pipes         ```Transformers for data rendered```
+                - Services      ```Singletons that provide data``` 
+                - Core          ```Shared TypeScript Entities: Classes,enums,interfaces```
+- For now this app only has one feature: Manage friends/foes.
+So one version of all these directories will sit in the root/app module.
+***
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Installing Tailwind CSS
+1. ```npm install -D tailwindcss postcss autoprefixer```
+2. ```npx tailwindcss init```
+3. Setup `tailwind.config.js`
+    - Adding `"./src/app/*.{html,ts}"` to content for easy testing
+4. Add Tailwind to Application Wide `styles.css`
+    ``` @tailwind base;
+        @tailwind components;
+        @tailwind utilities;```
+5. Add some basic classes to see if Tailwind CSS is workign.
+***
+### Header - √
+#### Brand
+- Simple H1 with some styling.
+#### Links
+- [Installing FontAwesome](https://github.com/FortAwesome/angular-fontawesome)
+    - ```ng add @fortawesome/angular-fontawesome```
+    - Importing the FontAwesomeModule into the app
+        - ```import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';```
+        - ```imports:[FontAwesomeModule,...```
+- Adding an icon from FontAwesomeModule in the Header
+    - Getting the icon object in the HeaderComponent;
+        -  ```import {faGithub} from '@fortawesome/free-brands-svg-icons';```
+        - ```faGithub = faGithub;```
+    - Adding the icon to the HeaderTemplate
+        - `<fa-icon [icon]="faGithub"></fa-icon>`
+- Making link open in new page
+    - ```target="_blank"```
+***
+### Navbar
+- Created an array with NavLink data objects in Core for an easy modular modification of the navbar.
+- Imported the array in the navbar
+- Added basic styling
+- Renders dumb component: _nav-link_ and passes it nav-data
 
-## Code scaffolding
+### Nav-Link
+- Setup to receive input.
+- Created Interface for NavLink to satisfy strict mode
+- Read out passed in navLink information to name buttons, add tooltips.
+### Friends-Form
+- Have a navigation link work towards the friends-form
+### HomePage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Friends-View

@@ -1,0 +1,73 @@
+form{
+    @apply
+    p-4
+    shadow-md
+    rounded-md
+    hover:shadow-lg
+    text-center
+    
+}
+form div{
+    @apply
+    w-full
+    p-2
+    flex
+    flex-col
+    odd:bg-slate-900
+    even:border
+    even:rounded-none
+    first:rounded-t-lg
+    md:w-2/4
+    md:mx-auto
+}
+
+form div:nth-child(odd) label{
+    @apply
+    
+    odd:text-slate-200
+}
+form div:nth-child(even) input{
+    @apply
+    bg-slate-900
+    text-slate-200
+}
+form div:nth-child(odd) input{
+    @apply
+    text-slate-900
+}
+label{
+    @apply
+    w-full
+    uppercase
+    font-mono
+}
+input,select{
+    @apply
+    w-3/4
+    mx-auto
+    rounded-md
+    p-1
+}
+
+button{
+    @apply
+    w-full
+    md:w-2/4
+    px-4
+    py-2
+    bg-slate-50
+    font-mono
+    rounded-b-lg
+    border-2
+    border-t-0
+    mb-2
+    hover:bg-emerald-700
+    hover:text-slate-50
+    active:bg-emerald-700
+    active:text-slate-50
+    focus:bg-emerald-700
+    focus:text-slate-50
+    transition-all
+    uppercase
+
+}

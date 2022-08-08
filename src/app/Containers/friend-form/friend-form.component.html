@@ -1,0 +1,27 @@
+<form [formGroup]="newFriendForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="first-name">First name:</label>
+    <input formControlName="firstName" name="first-name" type="text" />
+  </div>
+  <div>
+    <label for="last-name">Last name:</label>
+    <input formControlName="lastName" name="last-name" type="text" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input name="email" type="text" />
+  </div>
+  <div>
+    <label for="phone">Phone number:</label>
+    <input formControlName="phone" name="phone" type="text" />
+  </div>
+  <div>
+    <label for="programming-language">Pick your favorite:</label>
+    <select formControlName="programmingLanguage" name="programming-language">
+      <option value="html">html</option>
+      <option value="css">css</option>
+      <option value="javascript">javascript</option>
+    </select>
+  </div>
+  <button type="button" type="submit">Become a friend!</button>
+</form>

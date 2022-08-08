@@ -1,27 +1,66 @@
+<!-- {{ newFriendForm.value | json }} -->
 <form [formGroup]="newFriendForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="first-name">First name:</label>
-    <input formControlName="firstName" name="first-name" type="text" />
+    <input
+      formControlName="firstName"
+      [class.invalid-field]="firstName?.invalid && firstName?.touched"
+      [class.valid-field]="firstName?.valid && firstName?.touched"
+      name="first-name"
+      type="text"
+    />
   </div>
   <div>
     <label for="last-name">Last name:</label>
-    <input formControlName="lastName" name="last-name" type="text" />
+    <input
+      formControlName="lastName"
+      [class.invalid-field]="lastName?.invalid && lastName?.touched"
+      [class.valid-field]="lastName?.valid && lastName?.touched"
+      name="last-name"
+      type="text"
+    />
   </div>
   <div>
     <label for="email">Email:</label>
-    <input name="email" type="text" />
+    <input
+      formControlName="email"
+      [class.invalid-field]="email?.invalid && email?.touched"
+      [class.valid-field]="email?.valid && email?.touched"
+      name="email"
+      type="text"
+    />
   </div>
   <div>
     <label for="phone">Phone number:</label>
-    <input formControlName="phone" name="phone" type="text" />
+    <input
+      formControlName="phone"
+      [class.invalid-field]="phone?.invalid && phone?.touched"
+      [class.valid-field]="phone?.valid && phone?.touched"
+      name="phone"
+      type="text"
+    />
   </div>
   <div>
     <label for="programming-language">Pick your favorite:</label>
-    <select formControlName="programmingLanguage" name="programming-language">
-      <option value="html">html</option>
-      <option value="css">css</option>
-      <option value="javascript">javascript</option>
+    <select
+      formControlName="programmingLanguage"
+      name="programming-language"
+      formControlName="programmingLanguage"
+      [class.invalid-field]="
+        programmingLanguage?.invalid && programmingLanguage?.touched
+      "
+      [class.valid-field]="programmingLanguage?.valid"
+    >
+      <option
+        *ngFor="let language of programmingLang.sort()"
+        value="{{ language }}"
+      >
+        {{ language }}
+      </option>
     </select>
   </div>
-  <button type="button" type="submit">Become a friend!</button>
+  <button [disabled]="newFriendForm.invalid" type="button" type="submit">
+    <p *ngIf="newFriendForm.valid">Become a friend!</p>
+    <p *ngIf="newFriendForm.invalid">Please fill out the form</p>
+  </button>
 </form>

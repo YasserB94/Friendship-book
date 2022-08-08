@@ -1,4 +1,5 @@
 button{
+    transition: all 150ms ease-in-out;
     @apply
     relative
 
@@ -8,6 +9,8 @@ button{
     rounded-md
     hover:text-slate-200
     hover:bg-emerald-700
+    hover:shadow-xl
+    shadow-slate-100
     /*RESPONSIVENESS*/
     h-full
     py-2
@@ -15,20 +18,28 @@ button{
     mx-1
     sm:h-fit
     sm:py-2
+
 }
-button[title]:hover::before{
-    content: attr(title);
+button[title]::before{
+    content: '';
+    transition: all 150ms ease-in;
+    top: 0%;
+    width: 100%;
     @apply
-    
+    h-full
     absolute
     left-0
-    text-xs
+
     text-emerald-800
-    bg-slate-100
-    shadow-lg
+    shadow-emerald-50
+    text-xs
     p-2
     rounded-lg
-    sm:shadow-2xl
-    -bottom-full
-    sm:top-full
+}
+button[title]:hover::before{
+    top: 110%;
+    content: attr(title);
+    @apply
+    bg-slate-200
+    sm:shadow-md
 }

@@ -89,7 +89,29 @@ TODO:: TURN_NAV_LINK_DATA from core into associative array to improve code reada
     - Set Formgroup inside Friend-form
     - Added OnSubmit() function
     - Succesfully receives data and clears form.
+- Add Form validation
+    - Make all Fields Required
+    - See if name is only letters
+    - see if Email is valid email adress
+    - See if phone number has no letters
+    - make sure a favorite lang is selected
+    - Give visual feedback by changing input field colors
+    - Update button state depending on form validation
 
+### Storing submitted friend information on a server
+- Create a server - Using [ExpressJS](https://expressjs.com/) here
+    - `mkdir friend-app-server`
+    - `cd friend-app-server`
+    - `npm init`
+    - `npm install express`
+- This is a one file server, so not using the express generator.
+    - Created `index.js`
+    - [Create a hello world](https://expressjs.com/en/starter/hello-world.html)
+    - Run the server `node index.js`
+    - Check localhost:3000 for server response.
+    - 
+
+    
 
 
 ### HomePage

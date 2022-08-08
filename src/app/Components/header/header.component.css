@@ -7,6 +7,10 @@ header{
 
     flex
     justify-between
+    /* align-middle
+    text-center
+    content-center */
+
 
     border
     rounded-t-xl
@@ -24,12 +28,32 @@ h1{
     @apply
     font-mono
     hover:animate-pulse
+}
+.links-container{
+    @apply
+    flex
 
 }
-.links{
+.link{
+    position: relative;
     @apply
+    w-10
+    h-10
+    border-lime-300
     text-slate-700
     hover:text-emerald-700
     hover:animate-spin
+    
 }
+.link-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0); 
+    @apply
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    lg:text-5xl
 
+}

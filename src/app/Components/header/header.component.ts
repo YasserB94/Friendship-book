@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,13 +8,10 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   brand = {
-    title:'Friendship Book',
-  }
+    title: 'Friendship Book',
+  };
   faGithub = faGithub;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.faGithub)
-  }
-
+  ngOnInit(): void {}
 }

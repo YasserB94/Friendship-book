@@ -1,0 +1,30 @@
+/*Tailwind Example*/
+/* .btn{
+    @apply py-2
+    px-4
+    border
+    border-transparent
+    shadow-sm
+    text-sm
+    font-medium
+    rounded-md
+    text-white
+    bg-blue-400
+    hover:bg-pink-100
+} */
+/* Preferabely moving this somewhere, not sure how yet */
+body{
+    @apply
+    bg-slate-100
+}
+main{
+    @apply
+    px-5
+    mt-5
+    h-full
+    w-full
+    md:container
+    md:mx-auto
+
+    
+}

@@ -1,3 +1,7 @@
-<button type="button" [title]="navLink.description">
+<button
+  type="button"
+  [title]="navLink.description"
+  routerLink="{{ navLink.path }}"
+>
   {{ navLink.buttonName | uppercase }}
 </button>

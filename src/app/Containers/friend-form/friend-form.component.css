@@ -1,3 +1,5 @@
+body{
+}
 form{
     @apply
     p-4
@@ -23,8 +25,7 @@ form div{
 
 form div:nth-child(odd) label{
     @apply
-    
-    odd:text-slate-200
+    text-slate-200
 }
 form div:nth-child(even) input{
     @apply
@@ -33,6 +34,7 @@ form div:nth-child(even) input{
 }
 form div:nth-child(odd) input{
     @apply
+    bg-slate-200
     text-slate-900
 }
 label{
@@ -48,9 +50,22 @@ input,select{
     rounded-md
     p-1
 }
+select{
+    @apply
+    text-slate-200
+    bg-slate-900
+    border
+    border-slate-200
 
+
+}
+select:active{
+    @apply
+    bg-red-700
+}
 button{
     @apply
+    relative
     w-full
     md:w-2/4
     px-4
@@ -69,5 +84,36 @@ button{
     focus:text-slate-50
     transition-all
     uppercase
+
+}
+button:disabled:hover{
+    @apply
+    hover:bg-red-700
+    active:bg-red-700
+    focus:bg-red-700
+}
+button:disabled:hover:after{
+    content: 'Form not valid!';
+    @apply
+    absolute
+    w-full
+    h-full
+    top-0
+    px-4
+    py-2
+    left-0
+    bg-red-700
+    border-2
+    rounded-md
+
+}
+.invalid-field{
+    @apply
+    !bg-red-700
+}
+.valid-field{
+    @apply
+    !bg-emerald-600
+    !text-slate-100
 
 }

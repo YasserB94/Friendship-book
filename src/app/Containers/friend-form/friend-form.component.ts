@@ -18,9 +18,7 @@ export class FriendFormComponent implements OnInit {
   newFriendForm!: FormGroup;
   programmingLang: string[] = PROGRAMMING_LANGUAGES;
   formValid: boolean = false;
-  submitButtonMsg: string = '';
   ngOnInit(): void {
-    this.submitButtonMsg = 'Please fill out the form';
     this.newFriendForm = this.formBuilder.group({
       firstName: [
         'testName',

@@ -1,3 +1,4 @@
-<div *ngFor="let friend of friends">
-  <p>{{ friend.firstName }}</p>
+<div class="card-container">
+  <app-friend-card *ngFor="let friend of friends" [friend]="friend">
+  </app-friend-card>
 </div>

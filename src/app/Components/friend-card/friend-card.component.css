@@ -1,0 +1,21 @@
+
+.card{
+    user-select: none;
+    @apply
+    border-2
+    bg-slate-100
+    rounded
+    border-emerald-700
+    font-mono
+    my-3
+    hover:shadow-slate-100
+    hover:shadow-sm
+    shadow-slate-100
+    min-w-full
+    md:min-w-fit
+    md:w-2/5
+    mx-auto
+    p-3
+    hover:bg-emerald-800
+    hover:text-slate-100
+}

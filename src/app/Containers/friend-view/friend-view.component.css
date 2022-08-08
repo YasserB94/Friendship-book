@@ -1,0 +1,16 @@
+.card-container{
+    @apply
+    mt-10
+    relative
+    bg-slate-800
+    rounded-md
+    shadow-sm
+    flex
+    flex-col
+    min-w-full
+    w-full
+    md:flex-row
+    md:p-3
+    md:flex-wrap
+    md:justify-between
+}

@@ -78,6 +78,20 @@ So one version of all these directories will sit in the root/app module.
 - Read out passed in navLink information to name buttons, add tooltips.
 ### Friends-Form
 - Have a navigation link work towards the friends-form
+    - Added ```routerLink="{{ navLink.path }}"``` to every button
+    - Linked the path within the routing.module
+TODO:: TURN_NAV_LINK_DATA from core into associative array to improve code readabilty in routes.
+- Turn form into `[formGroup]`
+    - Added FormsModule,ReactiveFormsModule to root module
+    - Provided FormBuilder trough root module
+    - Got FormBuilder into friends-form container
+    - Added angular formgroup to HTML
+    - Set Formgroup inside Friend-form
+    - Added OnSubmit() function
+    - Succesfully receives data and clears form.
+
+
+
 ### HomePage
 
 ### Friends-View
